@@ -14,7 +14,7 @@
 
     .container {
       background-color: #ffffff15;
-      max-width: 500px;
+      max-width: 550px;
       margin: 50px auto;
       padding: 30px 40px;
       border-radius: 15px;
@@ -93,6 +93,36 @@
       font-size: 20px;
       color: #f9f9f9;
     }
+
+    .checkbox-group {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .checkbox-group label {
+      font-weight: normal;
+      background: #2980b9;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s ease-in-out;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      display: none;
+    }
+
+    .checkbox-group input[type="checkbox"]:checked + label {
+      background-color: #27ae60;
+    }
+
+    .tools-heading {
+      margin-top: 20px;
+      color: #f1c40f;
+      font-size: 18px;
+    }
   </style>
 </head>
 <body>
@@ -119,6 +149,35 @@
     <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
     
     <hr>
+
+    <div class="tools-heading">Select DevOps Tools You Are Interested In:</div>
+    <div class="checkbox-group">
+      <input type="checkbox" id="docker" name="tools[]" value="Docker">
+      <label for="docker">Docker</label>
+
+      <input type="checkbox" id="jenkins" name="tools[]" value="Jenkins">
+      <label for="jenkins">Jenkins</label>
+
+      <input type="checkbox" id="kubernetes" name="tools[]" value="Kubernetes">
+      <label for="kubernetes">Kubernetes</label>
+
+      <input type="checkbox" id="ansible" name="tools[]" value="Ansible">
+      <label for="ansible">Ansible</label>
+
+      <input type="checkbox" id="terraform" name="tools[]" value="Terraform">
+      <label for="terraform">Terraform</label>
+
+      <input type="checkbox" id="prometheus" name="tools[]" value="Prometheus">
+      <label for="prometheus">Prometheus</label>
+
+      <input type="checkbox" id="grafana" name="tools[]" value="Grafana">
+      <label for="grafana">Grafana</label>
+
+      <input type="checkbox" id="git" name="tools[]" value="Git">
+      <label for="git">Git</label>
+    </div>
+
+    <br>
     <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
     <button type="submit" class="registerbtn">Register</button>
 
